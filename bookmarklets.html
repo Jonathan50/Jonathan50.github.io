@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookmarklets</title>
+  </head>
+  <body>
+    <h2>Bookmarklets</h2>
+    <ul>
+      <li>
+        To install Beigify, just drag this link to your bookmarks bar:
+        <a href='javascript:var s;if((s=document.getElementById("beigify"))==null){s=document.createElement("style");s.id="beigify";s.innerText="body{background-color:beige !important;}";document.head.appendChild(s);}else{document.head.removeChild(s);}void 0;'>Beigify</a>
+      </li>
+      <li>
+        To install WebListen, just drag this link to your bookmarks bar:
+        <a href='javascript:(function(){if(!window.speechSynthesis){alert("Your browser does not support speech synthesis. You can use Mozilla Firefox 49+, Safari 7+, Google Chrome 33+, or another browser that supports the speech synthesis web API.");return;}if(speechSynthesis.getVoices().length==0){alert("No voices are available.");return;}speechSynthesis.speak(new SpeechSynthesisUtterance(document.body.innerText));})()'>WebListen</a>
+      </li>
+      <li>
+        To install HTAifier, just drag this link to your bookmarks bar:
+        <a href='javascript:var uri="data:object/x-mshta;base64,"+btoa("<!DOCTYPE html><html><head><title>"+document.title+"</title><style>html,body,iframe{margin:0;height:100%;width:100%;}</style></head><body><iframe frameborder=\"none\" src=\""+location.href+"\"></iframe></body></html>");var link=document.createElement("a");link.download=document.title+".hta";link.href=uri;document.body.appendChild(link);link.click();document.body.removeChild(link);void 0;'>HTAifier</a>
+      </li>
+    </ul>
+  </body>
+</html>
